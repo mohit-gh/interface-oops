@@ -1,0 +1,10 @@
+Interface
+An Interface is a description of the action that an object can do.
+Interface is written in the same way as the class the declaration with interface keyword.
+
+Rules of Interface:
+
+All Methods in the interface must be public; this is the nature of an interface.
+All Methods in the interface must be implemented within the class; failure to do so will result in a fatal error.
+The class implementing the interface must use the exact same method signatures as are defined in the interface.
+Interfaces can be extended like the class using the extends operator.
