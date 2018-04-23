@@ -23,15 +23,15 @@ Output : Descibing mango fruit
 
 2) Interface can be extended with another interface using extends keyword
 <?php
-  interface A {
+  interface X {
       public function divide($v1,$v2);
   }
   
-  interface B extends A {
+  interface Y extends X {
       public function compute($v1,$v2);
   }
   
-  class Calculator implements B {
+  class Calculator implements Y {
       public function divide($v1,$v2) {
           $this->v1 = $v1;
           $this->v2 = $v2;
@@ -49,7 +49,9 @@ Output : Descibing mango fruit
   
   $calcobj = new Calculator();
   $calcobj->divide(20,4);
-  echo $calcobj->compute(78,145);
-  
-  
+  echo "<br/>";
+  echo $calcobj->compute(78,145)."<br/>";
 ?>
+Output : 
+Result for divide is 5
+Result for Computation is 223
