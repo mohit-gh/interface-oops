@@ -4,7 +4,12 @@ Interface is written in the same way as the class the declaration with interface
 
 Rules of Interface:
 
-All Methods in the interface must be public; this is the nature of an interface.
-All Methods in the interface must be implemented within the class; failure to do so will result in a fatal error.
-The class implementing the interface must use the exact same method signatures as are defined in the interface.
-Interfaces can be extended like the class using the extends operator.
+1) All Methods in the interface must be public; this is the nature of an interface.
+2) All Methods in the interface must be implemented within the class; failure to do so will result in a fatal error.
+3) The class implementing the interface must use the exact same method signatures as are defined in the interface.
+4) Interfaces can be extended like the class using the extends operator.
+
+Notes on Interface: 
+1) We cannot create objects to interface, but the class implementing the interface can have objects.
+2) We cannot define a variable in an interface.
+3) If we extend interface all the methods of the interface must be implemented in the child class.
