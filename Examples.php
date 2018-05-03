@@ -55,3 +55,39 @@ Output : Descibing mango fruit
 Output : 
 Result for divide is 5
 Result for Computation is 223
+---------------------------------------------------------------------------------------------------------------------------------
+<?php
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
+  class Collection implements Countable, JsonSerializable {
+
+    protected $items = [];
+
+    public function add($value) {
+      $this->items[] = $value;
+    }
+
+    public function set($key, $value) {
+      $this->items[$key] = $value;
+    }
+
+    public function jsonSerialize() {
+      return json_encode($this->items);
+    }
+
+    public function count() {
+      return  count($this->items);
+    }
+
+  }
+
+  $c = new Collection();
+  $c->add('Mohit');
+  $c->add('Mayur');
+
+  echo count($c)."<br/>";
+  echo json_encode($c);
+//Output : 2 
+//Output : "[\"Mohit\",\"Mayur\"]"
+?>
